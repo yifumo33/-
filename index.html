@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="https://cdn.bootcss.com/jquery/2.2.2/jquery.min.js"></script>
+	<style>
+		.haha{
+			text-align: center;
+			margin-top: 2px;
+		}
+		
+	</style>
+</head>
+<body>
+	
+			<div class="haha"> <img src="https://i.loli.net/2018/03/28/5abb9626d1e3d.gif" data-src="https://i.loli.net/2018/03/28/5abba06c4fb62.jpg"></div>
+			<div class="haha"> <img src="https://i.loli.net/2018/03/28/5abb9626d1e3d.gif" data-src="https://i.loli.net/2018/03/28/5abba06c5ff84.jpg"></div>
+			<div class="haha"> <img src="https://i.loli.net/2018/03/28/5abb9626d1e3d.gif" data-src="https://i.loli.net/2018/03/28/5abba06c76531.jpg"></div>
+			<div class="haha"> <img src="https://i.loli.net/2018/03/28/5abb9626d1e3d.gif" data-src="https://i.loli.net/2018/03/28/5abba06cbc6bb.jpg"></div>
+			<div class="haha"> <img src="https://i.loli.net/2018/03/28/5abb9626d1e3d.gif" data-src="https://i.loli.net/2018/03/28/5abba06cc132a.jpg"></div>
+			<div class="haha xxx"> <img src="https://i.loli.net/2018/03/28/5abb9626d1e3d.gif" data-src="https://i.loli.net/2018/03/28/5abba06ccd674.jpg"></div>
+			<div class="haha"> <img src="https://i.loli.net/2018/03/28/5abb9626d1e3d.gif" data-src="https://i.loli.net/2018/03/28/5abba06cdaaf6.jpg"></div>
+			<div class="haha"> <img src="https://i.loli.net/2018/03/28/5abb9626d1e3d.gif" data-src="https://i.loli.net/2018/03/28/5abba06cdd768.jpg"></div>
+			<div class="haha"> <img src="https://i.loli.net/2018/03/28/5abb9626d1e3d.gif" data-src="https://i.loli.net/2018/03/28/5abba06ce73b0.jpg"></div>
+			<div class="haha"> <img src="https://i.loli.net/2018/03/28/5abb9626d1e3d.gif" data-src="https://i.loli.net/2018/03/28/5abba070c922d.gif"></div>
+	
+	<script>
+	   $(window).on('scroll',function(){
+	   	$('.haha').each(function(){
+	   		if(isShow($(this))){
+	   			loadImg($(this))
+	   		}
+	   	})
+	   })
+
+
+	   function isShow($node){
+	   	return ($(window).scrollTop() + $(window).height() > $node.offset().top)
+	   }
+
+	   function loadImg($node){
+	   	setTimeout(function(){
+	   		$node.children('img').attr('src',$node.children('img').attr('data-src'))
+	   	},600)
+	   	
+	   }
+	</script>
+</body>
+
+</html>
